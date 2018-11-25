@@ -1,0 +1,9 @@
+digraph G {
+"odom" -> "base_link"[label="Broadcaster: /base_control_node\nAverage rate: 48.595 Hz\nMost recent transform: 1542427671.755 ( 0.013 sec old)\nBuffer length: 4.980 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 15.204 Hz\nMost recent transform: 1542427672.680 ( -0.912 sec old)\nBuffer length: 4.933 sec\n"];
+"base_link" -> "laser_link"[label="Broadcaster: /laser_link_broadcaster\nAverage rate: 10.195 Hz\nMost recent transform: 1542427671.803 ( -0.035 sec old)\nBuffer length: 4.904 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1542427671.768"[ shape=plaintext ] ;
+ }->"map";
+}
